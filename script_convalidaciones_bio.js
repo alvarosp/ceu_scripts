@@ -139,7 +139,10 @@ function main(){
 
     if(subjects.hasOwnProperty('Técnicas de Imagen en Biomedicina') && 
       subjects.hasOwnProperty('Tratamiento Digital de Imágenes')){ //35
-      HTMLTable += `<tr><td>Técnicas de Imagen en Biomedicina<br>Tratamiento Digital de Imágenes</td><td>Técnicas de imagen en biomedicina<br>Tratamiento digital de Imágenes</td></tr>`;
+      HTMLTable += `<tr><td>Técnicas de Imagen en Biomedicina<br>
+        Tratamiento Digital de Imágenes</td><td>
+        Técnicas de imagen en biomedicina<br>
+        Tratamiento digital de Imágenes</td></tr>`;
       subjects['Técnicas de Imagen en Biomedicina'].creditos -= 3;
       subjects['Tratamiento Digital de Imágenes'].creditos -= 6;
     } else if (subjects.hasOwnProperty('Tratamiento Digital de Imágenes')) { //27
@@ -147,9 +150,16 @@ function main(){
       subjects['Tratamiento Digital de Imágenes'].creditos -= 4.5;
     } else if (subjects.hasOwnProperty('Técnicas de Imagen en Biomedicina') &&
       subjects.hasOwnProperty('Proyectos en Ingeniería Biomédica I')){ //28
-      HTMLTable += `<tr><td>Técnicas de Imagen en Biomedicina<br>Proyectos en Ingeniería Biomédica I</td><td>Técnicas de imagen en biomedicina</td></tr>`;
+      HTMLTable += `<tr><td>Técnicas de Imagen en Biomedicina<br>
+        Proyectos en Ingeniería Biomédica I</td><td>
+        Técnicas de imagen en biomedicina</td></tr>`;
       subjects['Técnicas de Imagen en Biomedicina'].creditos -= 3;
       subjects['Proyectos en Ingeniería Biomédica I'].creditos -= 1.5;
+    }
+    if(subjects.hasOwnProperty('Proyectos en Ingeniería Biomédica I')){ //36
+      HTMLTable += `<tr><td>Proyectos en Ingeniería Biomédica I</td><td>
+        Empresas y emprendimiento</td></tr>`;
+      subjects['Proyectos en Ingeniería Biomédica I'].creditos -= 4.5;
     }
 
     if(subjects.hasOwnProperty('Telemedicina') &&
@@ -167,21 +177,21 @@ function main(){
         Telemedicina<br>
         Electrónica analógica aplicada a la ingeniería biomédica<br>
         Señales Biomédicas</td></tr>`;
-        subjects['Telemedicina'].creditos -= 3;
-        subjects['Señales Biomédicas'].creditos -= 3;
-        subjects['Instrumentación Biomédica'].creditos -= 3;
-        subjects['Proyectos en Ingeniería Biomédica I'].creditos -= 1.5;
-        subjects['Fundamentos Matemáticos de la Ingeniería Biomédica III'].creditos -= 2;
-        subjects['Fisiopatología y Patología General'].creditos -= 1;
+      subjects['Telemedicina'].creditos -= 3;
+      subjects['Señales Biomédicas'].creditos -= 3;
+      subjects['Instrumentación Biomédica'].creditos -= 3;
+      subjects['Proyectos en Ingeniería Biomédica I'].creditos -= 1.5;
+      subjects['Fundamentos Matemáticos de la Ingeniería Biomédica III'].creditos -= 2;
+      subjects['Fisiopatología y Patología General'].creditos -= 1;
     } else {
       if (subjects.hasOwnProperty('Telemedicina') &&
         subjects.hasOwnProperty('Señales Biomédicas') &&
         subjects.hasOwnProperty('Instrumentación Biomédica')){ //32
         HTMLTable += `<tr><td>Telemedicina<br>
-        Señales Biomédicas<br>
-        Instrumentación Biomédica</td><td>
-        Telemedicina<br>
-        Electrónica analógica aplicada a la ingeniería biomédica</td></tr>`;
+          Señales Biomédicas<br>
+          Instrumentación Biomédica</td><td>
+          Telemedicina<br>
+          Electrónica analógica aplicada a la ingeniería biomédica</td></tr>`;
         subjects['Telemedicina'].creditos -= 3;
         subjects['Señales Biomédicas'].creditos -= 3;
         subjects['Instrumentación Biomédica'].creditos -= 3;
@@ -190,11 +200,11 @@ function main(){
         subjects.hasOwnProperty('Fundamentos Matemáticos de la Ingeniería Biomédica III') &&
         subjects.hasOwnProperty('Proyectos en Ingeniería Biomédica I')){ //40
         HTMLTable += `<tr><td>Instrumentación Biomédica<br>
-        Señales Biomédicas<br>
-        Fundamentos Matemáticos de la Ingeniería Biomédica III<br>
-        Proyectos en Ingeniería Biomédica I</td><td>      
-        Electrónica analógica aplicada a la ingeniería biomédica<br>
-        Señales Biomédicas</td></tr>`;
+          Señales Biomédicas<br>
+          Fundamentos Matemáticos de la Ingeniería Biomédica III<br>
+          Proyectos en Ingeniería Biomédica I</td><td>      
+          Electrónica analógica aplicada a la ingeniería biomédica<br>
+          Señales Biomédicas</td></tr>`;
         subjects['Instrumentación Biomédica'].creditos -= 3;
         subjects['Señales Biomédicas'].creditos -= 3;
         subjects['Fundamentos Matemáticos de la Ingeniería Biomédica III'].creditos -= 2;
@@ -202,21 +212,21 @@ function main(){
       } else if (subjects.hasOwnProperty('Instrumentación Biomédica') &&
         subjects.hasOwnProperty('Señales Biomédicas')){ //39
         HTMLTable += `<tr><td>Instrumentación Biomédica<br>
-        Señales Biomédicas</td><td>      
-        Electrónica analógica aplicada a la ingeniería biomédica</td></tr>`;
+          Señales Biomédicas</td><td>      
+          Electrónica analógica aplicada a la ingeniería biomédica</td></tr>`;
         subjects['Instrumentación Biomédica'].creditos -= 3;
         subjects['Señales Biomédicas'].creditos -= 3;
       } else if (subjects.hasOwnProperty('Telemedicina') &&
         subjects.hasOwnProperty('Señales Biomédicas')){ //41
         HTMLTable += `<tr><td>Telemedicina<br>
-        Señales Biomédicas</td><td>
-        Telemedicina</td></tr>`;
+          Señales Biomédicas</td><td>
+          Telemedicina</td></tr>`;
         subjects['Telemedicina'].creditos -= 3;
         subjects['Señales Biomédicas'].creditos -= 3;
       }
       if(subjects.hasOwnProperty('Fisiopatología y Patología General')){ //29
         HTMLTable += `<tr><td>Fisiopatología y Patología General</td><td>
-        Fisiopatología y patología general</td></tr>`;
+          Fisiopatología y patología general</td></tr>`;
         subjects['Fisiopatología y Patología General'].creditos -= 6;
       }
     }
@@ -225,10 +235,10 @@ function main(){
       subjects.hasOwnProperty('Minería de Datos en Biomedicina') &&
       subjects.hasOwnProperty('Fundamentos Matemáticos de la Ingeniería Biomédica III')){ //34
       HTMLTable += `<tr><td>Sistemas de Soporte a la Decisión<br>
-      Minería de Datos en Biomedicina<br>
-      Fundamentos Matemáticos de la Ingeniería Biomédica III</td><td>
-      Aprendizaje automático en biomedicina<br>
-      Sistemas de Soporte a la Decisión</td></tr>`;
+        Minería de Datos en Biomedicina<br>
+        Fundamentos Matemáticos de la Ingeniería Biomédica III</td><td>
+        Aprendizaje automático en biomedicina<br>
+        Sistemas de Soporte a la Decisión</td></tr>`;
       subjects['Sistemas de Soporte a la Decisión'].creditos -= 4.5;
       subjects['Minería de Datos en Biomedicina'].creditos -= 4.5;
       subjects['Fundamentos Matemáticos de la Ingeniería Biomédica III'].creditos -= 3;
@@ -237,8 +247,8 @@ function main(){
     if(subjects.hasOwnProperty('Métodos Numéricos en Ingeniería Biomédica') &&
       subjects.hasOwnProperty('Fundamentos Matemáticos de la Ingeniería Biomédica III')){ //42
       HTMLTable += `<tr><td>Métodos Numéricos en Ingeniería Biomédica<br>
-      Fundamentos Matemáticos de la Ingeniería Biomédica III</td><td>
-      Métodos Numéricos en Ingeniería Biomédica</td></tr>`;
+        Fundamentos Matemáticos de la Ingeniería Biomédica III</td><td>
+        Métodos Numéricos en Ingeniería Biomédica</td></tr>`;
       subjects['Métodos Numéricos en Ingeniería Biomédica'].creditos -= 4.5;
       subjects['Fundamentos Matemáticos de la Ingeniería Biomédica III'].creditos -= 3;
     }
@@ -249,7 +259,17 @@ function main(){
     for (const subject in subjects){
       const data = subjects[subject];
       if (data.creditos != data.creditosMax && data.creditos != 0){
-        HTMLTable += `<tr><td>${data.name}</td><td>${data.creditos}</td></tr>`;
+        let subjectName = data.name;
+        if(data.creditos < 0){
+          subjectName += " ¡¡REVISAR!!";
+        }
+        HTMLTable += `<tr><td>${subjectName}</td><td>${data.creditos}</td></tr>`;
+      }
+    }
+    if(subjects.hasOwnProperty('Fundamentos Matemáticos de la Ingeniería Biomédica III')){
+      const fm3Data = subjects['Fundamentos Matemáticos de la Ingeniería Biomédica III'];
+      if(fm3Data.creditos == fm3Data.creditosMax){
+        HTMLTable += `<tr><td>${fm3Data.name}</td><td>${fm3Data.creditos}</td></tr>`;
       }
     }
     HTMLTable += HTMLTableEnd;
